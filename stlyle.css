@@ -26,6 +26,10 @@
         --blue-Rumos: #0083b0;
     }
     
+    html {
+        scroll-behavior: smooth;
+    }
+    
     .hamburger {
         /* background-color: red; */
         width: 2rem;
@@ -43,6 +47,7 @@
     
     .show-menu .hamburger {
         right: 16rem;
+        z-index: 152;
     }
     
     .line {
@@ -52,7 +57,8 @@
         position: relative;
         height: .2rem;
         background-color: rgb(255, 255, 255);
-        box-shadow: .2rem .2rem rgb(92, 86, 86);
+        border: solid 2px rgb(255, 255, 255);
+        box-shadow: .05rem .05rem rgba(0, 0, 0, 1);
         border-radius: .8rem;
         transition: transform 1s;
     }
@@ -60,6 +66,7 @@
     .show-menu #line1 {
         transform: rotate(45deg) translate(.5rem, .55rem);
         background-color: black;
+        border: solid .5px rgb(0, 0, 0);
         box-shadow: none;
     }
     
@@ -71,6 +78,7 @@
     .show-menu #line3 {
         transform: rotate(-45deg) translate(.2rem, -.3rem);
         background-color: black;
+        border: solid .5px rgb(0, 0, 0);
         box-shadow: none;
     }
     
@@ -207,6 +215,7 @@
         top: 0;
         right: -20rem;
         transition: 1s;
+        z-index: 150;
     }
     
     .show-menu .sidebar {
@@ -629,4 +638,55 @@
     .btn {
         grid-column: 2;
         width: 100%;
+    }
+    
+    footer {
+        widht: 100%;
+        height: 3rem;
+        background-color: #242424;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footer-content {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footer-content p {
+        font-family: var(--font-secondary);
+        color: #0083b0;
+        font-size: 1.2rem;
+    }
+    
+    .social-list a {
+        margin: 0 2rem;
+        color: #0083b0;
+        font-size: 1.2rem;
+    }
+    
+    .social-list ul {
+        display: flex;
+    }
+    
+    #link-ao-topo {
+        position: fixed;
+        right: 3rem;
+        bottom: 4rem;
+        width: 3rem;
+        height: 3rem;
+        font-size: 2rem;
+        background: linear-gradient(to right, #00b4db, #0083b0);
+        background: -webkit-linear-gradient(to left, #00b4db, #0083b0);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #eee;
+        box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+        text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+        border-radius: .5rem;
+        z-index: 152;
     }
