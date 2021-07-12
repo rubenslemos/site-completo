@@ -547,8 +547,8 @@
         background: linear-gradient(to right, #00b4db, #0083b0);
         padding: 1rem 1rem;
         border-radius: .5rem;
-        text-shadow: .05rem .05rem rgba(0, 0, 0, .8);
         width: 8.5rem;
+        text-shadow: .05rem .05rem rgba(0, 0, 0, .8);
         height: 2.5rem;
         display: flex;
         justify-content: center;
@@ -560,4 +560,73 @@
         cursor: pointer;
         transition: .7s;
         opacity: .8;
+    }
+    
+    .sessao-orcamento {
+        width: 100%;
+        height: 100vh;
+        background: url(/img/orcamento.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .orcamento-wrapper {
+        width: 60%;
+        height: 80%;
+        background-color: rgba(238, 238, 238, .5);
+        box-shadow: .05rem .05rem .5rem rgba(0, 0, 0, .8);
+        border-radius: 10px;
+        position: relative;
+    }
+    
+    .sessao-orcamento h1 {
+        position: absolute;
+        top: -2.5rem;
+        left: 2rem;
+        background: #0083b0;
+        background: -webkit-linear-gradient(to right, #00b4db, #0083b0);
+        background: linear-gradient(to right, #00b4db, #0083b0);
+        padding: 0 3rem;
+        color: #fff;
+        font-family: var(--font-primary);
+        font-size: 3rem;
+        font-weight: lighter;
+        box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+    
+    .sessao-orcamento form {
+        margin: 8rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+    
+    .sessao-orcamento label {
+        font-family: var(--font-action);
+        font-size: 1.5rem;
+    }
+    
+    .sessao-orcamento input[type="number"] {
+        font-family: var(--font-secondary);
+        width: 4rem;
+        height: 1.5rem;
+        font-size: 1.5rem;
+        outline: none;
+        border-radius: .3rem;
+        padding: .5rem;
+    }
+    
+    .sessao-orcamento input[type="checkbox"] {
+        width: 2rem;
+        height: 1rem;
+    }
+    
+    .btn {
+        grid-column: 2;
+        width: 100%;
     }
