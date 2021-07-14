@@ -23,6 +23,8 @@
         --font-secondary: 'Josefin Slab', serif;
         --font-action: 'Mulish', sans-serif;
         --blue-Rumos: #0083b0;
+        --cor-fundo: #413b3b;
+        --azul-Rumos: #1e5677;
     }
     
     html {
@@ -55,17 +57,17 @@
         padding: 0;
         position: relative;
         height: .2rem;
-        background-color: rgb(255, 255, 255);
-        border: solid 2px rgb(255, 255, 255);
-        box-shadow: .05rem .05rem rgba(0, 0, 0, 1);
+        background-color: rgb(56, 129, 172);
+        border: solid 2px rgb(56, 129, 172);
+        box-shadow: .05rem .05rem rgb(56, 129, 172);
         border-radius: .8rem;
         transition: transform 1s;
     }
     
     .show-menu #line1 {
         transform: rotate(45deg) translate(.5rem, .55rem);
-        background-color: black;
-        border: solid .5px rgb(0, 0, 0);
+        background-color: rgb(56, 129, 172);
+        border: solid .5px rgb(56, 129, 172);
         box-shadow: none;
     }
     
@@ -76,8 +78,8 @@
     
     .show-menu #line3 {
         transform: rotate(-45deg) translate(.2rem, -.3rem);
-        background-color: black;
-        border: solid .5px rgb(0, 0, 0);
+        background-color: rgb(56, 129, 172);
+        border: solid .5px rgb(56, 129, 172);
         box-shadow: none;
     }
     
@@ -94,7 +96,7 @@
         padding: 1rem 2rem;
         border-radius: .88rem;
         font-family: var(--font-action);
-        text-shadow: .05rem .05rem rgba(0, 0, 0, .8);
+        text-shadow: .05rem .05rem rgb(56, 129, 172);
         opacity: 0;
         transition: 1s;
     }
@@ -124,20 +126,20 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, .5);
     }
     
     .img-wrapper img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        opacity: 0.5;
+        opacity: .5;
         animation: zoom 5s;
     }
     
     @keyframes zoom {
         0% {
-            transform: scale(1.5);
+            transform: scale(1.7);
         }
         100% {
             transform: scale(1);
@@ -150,16 +152,24 @@
         left: 15%;
     }
     
+    .banner img {
+        width: 50%;
+        height: 50%;
+        margin-bottom: 2rem;
+        opacity: 0;
+        animation: moveBanner 1s .5s forwards;
+    }
+    
     .banner h1 {
         color: #ffffff;
         font-size: 3.5rem;
         font-family: var(--font-primary);
         line-height: 5rem;
         font-weight: 200;
-        text-shadow: .1rem .2rem 2px rgb(0, 0, 0);
+        text-shadow: .1rem .1rem 1px rgb(30, 86, 119);
         margin-bottom: 2rem;
         opacity: 0;
-        animation: moveBanner 1s .5s forwards;
+        animation: moveBanner 1s .7s forwards;
     }
     
     .banner p {
@@ -168,15 +178,15 @@
         font-family: var(--font-secondary);
         color: #fff;
         font-size: 2rem;
-        text-shadow: .1rem .1rem 2px rgb(0, 0, 0);
+        text-shadow: .1rem .1rem 3px rgb(30, 86, 119);
         opacity: 0;
-        animation: moveBanner 1s .7s forwards;
+        animation: moveBanner 1s .9s forwards;
     }
     
     .banner button {
         font-family: var(--font-action);
         font-size: 1.2rem;
-        color: #3e3e99;
+        color: #fff;
         background: linear-gradient(to right, #00b4db, #0083b0);
         padding: 1rem 2rem;
         border-radius: .8rem;
@@ -209,7 +219,8 @@
     .sidebar {
         width: 20rem;
         height: 100vh;
-        background-color: #ffffff;
+        background-color: var(--cor-fundo);
+        /* background-color: #ffffff; */
         position: fixed;
         top: 0;
         right: -20rem;
@@ -222,6 +233,7 @@
     }
     
     .menu {
+        width: 95%;
         position: absolute;
         top: 40%;
         left: 50%;
@@ -229,20 +241,21 @@
     }
     
     .menu-item {
-        text-align: center;
-        margin-bottom: 1rem;
+        text-align: left;
+        margin-bottom: 2rem;
+        padding-left: 2rem;
     }
     
     .menu-link {
         font-family: var(--font-action);
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 600;
-        color: #555;
-        transition: color 1s;
+        color: #0083b0;
+        transition: color .5s;
     }
     
     .menu-link:hover {
-        color: #0083b0;
+        color: #eee;
     }
     
     .social-media {
@@ -255,7 +268,7 @@
     }
     
     .social-media i {
-        color: #555;
+        color: #0083b0;
         height: 3rem;
         width: 3rem;
         font-size: 2rem;
@@ -263,11 +276,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: color 1s;
+        transition: color .5s;
     }
     
     .social-media i:hover {
-        color: #0083b0;
+        color: #eee;
     }
     
     .conhecimentos {
@@ -314,7 +327,7 @@
     }
     
     .sessao-conhecimentos {
-        background-color: #f5f5f5;
+        background-color: #413b3b;
         height: 100vh;
     }
     
@@ -322,8 +335,8 @@
         font-family: var(--font-primary);
         font-size: 3rem;
         color: var(--blue-Rumos);
-        border-bottom: solid 3px #0083b0;
         margin-bottom: 7rem;
+        text-shadow: .05rem .05rem .5rem rgba(0, 0, 0, .8);
     }
     
     .conhecimento-header {
@@ -341,6 +354,7 @@
     .conhecimento-header i {
         font-size: 2.5rem;
         color: var(--blue-Rumos);
+        font-weight: bolder;
     }
     
     .conhecimento-text {
@@ -348,6 +362,7 @@
         margin-top: 1rem;
         text-align: justify;
         color: rgba(0, 131, 176, .7);
+        font-weight: 700;
     }
     
     .conhecimentos-img-wrapper {
@@ -363,7 +378,7 @@
     
     .sessao-projetos {
         height: 100vh;
-        background-color: #f5f5f5;
+        background-color: var(--cor-fundo);
     }
     
     .projetos {
@@ -463,7 +478,7 @@
     .sessao-contato {
         width: 100%;
         height: 100vh;
-        background-color: #242424;
+        background-color: rgb(94, 94, 94);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -473,6 +488,7 @@
         width: 60%;
         display: flex;
         box-shadow: 0 2rem 3rem rgba(0, 0, 0, .5);
+        border-radius: 1rem;
     }
     
     .contato-left {
@@ -486,8 +502,12 @@
     
     .contato-right {
         width: 65%;
-        background-color: #eee;
+        background-color: var(--cor-fundo);
         padding: 1rem 3rem 3rem 3rem;
+        border-radius: 0rem 1rem 1rem 0rem;
+        color: var(--blue-Rumos);
+        font-weight: 700;
+        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
     }
     
     .contato-right h1 {
@@ -497,6 +517,7 @@
         color: var(--blue-Rumos);
         margin-bottom: 3rem;
         text-align: center;
+        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
     }
     
     .sessao-contato form {
@@ -524,7 +545,7 @@
         height: 3rem;
         font-size: 1.5rem;
         font-family: var(--font-secondary);
-        border-bottom: 2px dashed #636363;
+        border-bottom: 2px dashed var(--blue-Rumos);
         outline: none;
         margin: 2rem 0;
     }
@@ -545,7 +566,7 @@
     }
     
     .field:focus {
-        border-bottom: 2px solid;
+        border-bottom: 2px solid var(--blue-Rumos);
     }
     
     .btn-subimit {
@@ -573,9 +594,9 @@
     .sessao-orcamento {
         width: 100%;
         height: 100vh;
-        background: url(/img/orcamento.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        background-color: var(--cor-fundo);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -584,33 +605,44 @@
     .orcamento-wrapper {
         width: 60%;
         height: 80%;
-        background-color: rgba(238, 238, 238, .5);
-        box-shadow: .05rem .05rem .5rem rgba(0, 0, 0, .8);
+        background-color: rgba(65, 59, 59, .95);
+        box-shadow: .05rem .05rem 2rem rgba(0, 0, 0, .8);
+        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
         border-radius: 10px;
         position: relative;
+        color: #1e5677;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .sessao-orcamento h1 {
         position: absolute;
-        top: -2.5rem;
-        left: 2rem;
-        background: #0083b0;
-        background: -webkit-linear-gradient(to right, #00b4db, #0083b0);
-        background: linear-gradient(to right, #00b4db, #0083b0);
+        top: 2rem;
+        right: 8rem;
+        color: var(--blue-Rumos);
         padding: 0 3rem;
-        color: #fff;
         font-family: var(--font-primary);
         font-size: 3rem;
-        font-weight: lighter;
-        box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
+        font-weight: 500;
+        text-align: center;
+        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
+        grid-column: 2;
+    }
+    
+    .sessao-orcamento img {
+        width: 19rem;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 0px 0px 10px;
+        margin-left: -5.5rem;
     }
     
     .sessao-orcamento form {
-        margin: 8rem;
+        margin-left: 2rem;
         display: grid;
         grid-template-columns: auto 1fr;
-        column-gap: 2rem;
+        column-gap: 1rem;
         row-gap: 2rem;
     }
     
@@ -619,28 +651,28 @@
         font-size: 1.5rem;
     }
     
+    .sessao-orcamento input {
+        background-color: rgba(65, 59, 59, .95);
+    }
+    
     .sessao-orcamento input[type="number"] {
         font-family: var(--font-secondary);
-        width: 4rem;
-        height: 1.5rem;
+        width: 4.5rem;
+        height: 1.8rem;
         font-size: 1.5rem;
         outline: none;
         border-radius: .3rem;
         padding: .5rem;
-    }
-    
-    .sessao-orcamento input[type="checkbox"] {
-        width: 2rem;
-        height: 1rem;
+        box-shadow: 0rem 0rem 0.3rem rgb(0, 0, 0);
     }
     
     .btn {
         grid-column: 2;
-        width: 100%;
+        width: 17rem;
     }
     
     footer {
-        widht: 100%;
+        width: 100%;
         height: 3rem;
         background-color: #242424;
         display: flex;
@@ -673,7 +705,7 @@
     #link-ao-topo {
         position: fixed;
         right: 3rem;
-        bottom: 4rem;
+        bottom: 6rem;
         width: 3rem;
         height: 3rem;
         font-size: 2rem;
@@ -688,4 +720,185 @@
         text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
         border-radius: .5rem;
         z-index: 152;
+    }
+    /* The contain */
+    
+    .contain {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    /* Hide the browser's default checkbox */
+    
+    .contain input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    /* Create a custom checkbox */
+    
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: rgba(65, 59, 59, .95);
+        box-shadow: 0rem 0rem 0.3rem rgb(0, 0, 0);
+        border-radius: .4rem;
+    }
+    /* Passando o mouse encima muda a borda */
+    
+    .contain:hover input~.checkmark {
+        border: solid 1px black;
+        box-shadow: none;
+    }
+    /* When the checkbox is checked, add a blue background */
+    
+    .contain input:checked~.checkmark {
+        background-color: var(--azul-Rumos);
+    }
+    /* Create the checkmark/indicator (hidden when not checked) */
+    
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    /* Show the checkmark when checked */
+    
+    .contain input:checked~.checkmark:after {
+        display: block;
+    }
+    /* Style the checkmark/indicator */
+    
+    .contain .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    
+    .containe {
+        display: block;
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: .5rem;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        align-items: center;
+        justify-content: left;
+    }
+    /* Hide the browser's default radio button */
+    
+    .containe input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    /* Create a custom radio button */
+    
+    .checkmar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1rem;
+        width: 1rem;
+        margin-top: .3rem;
+        background-color: rgba(65, 59, 59, .95);
+        box-shadow: 0rem 0rem 0.3rem rgb(0, 0, 0);
+        border-radius: 1rem;
+    }
+    /* On mouse-over, add a grey background color */
+    
+    .containe:hover input~.checkmar {
+        border: solid 1px black;
+        box-shadow: none;
+    }
+    /* When the radio button is checked, add a blue background */
+    
+    .containe input:checked~.checkmar {
+        background-color: var(--azul-Rumos);
+    }
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    
+    .checkmar:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    /* Show the indicator (dot/circle) when checked */
+    
+    .containe input:checked~.checkmar:after {
+        display: block;
+    }
+    /* Style the indicator (dot/circle) */
+    
+    .containe .checkmar:after {
+        top: .3rem;
+        left: .3rem;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: white;
+    }
+    
+    .slidecontainer {
+        width: 17rem;
+        grid-column: 2;
+    }
+    
+    .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: .4rem;
+        background-color: rgba(65, 59, 59, .95);
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        border-radius: .8rem;
+        box-shadow: .05rem .05rem .1rem black;
+    }
+    
+    .slider:hover {
+        opacity: 1;
+        box-shadow: none;
+        border: solid .08rem black;
+    }
+    
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 1rem;
+        height: 1rem;
+        background: #1e5677;
+        cursor: pointer;
+        border-radius: .8rem;
+    }
+    
+    .slider::-moz-range-thumb {
+        width: 1rem;
+        height: 1rem;
+        background: #1e5677;
+        cursor: pointer;
+        border-radius: .8rem;
     }

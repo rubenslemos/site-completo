@@ -28,19 +28,19 @@
                 <img src="/img/fundo.jpg" alt="background">
             </div>
             <div class="banner">
-                <h1>Web Developer & Front End Designer</h1>
-                <p>Rubens Silva Lemos</p>
-                <button>Saiba Mais</button>
+                <img src="/img/rumos.png" alt="Rumos Soluções em TI">
+                <h1>Rubens Silva Lemos</h1>
+                <p>Developer & Técnico de PCs</p>
             </div>
         </header>
         <aside class="sidebar">
             <nav>
                 <ul class="menu">
-                    <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimento</a></li>
-                    <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
-                    <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
-                    <li class="menu-item"><a href="#orcamento" class="menu-link">Orçamento</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link"><i class="fas fa-home"></i> Início</a></li>
+                    <li class="menu-item"><a href="#conhecimentos" class="menu-link"><i class="fas fa-book"></i> Conhecimento</a></li>
+                    <li class="menu-item"><a href="#projetos" class="menu-link"><i class="fas fa-address-book"></i> Cadastro de Clientes</a></li>
+                    <li class="menu-item"><a href="#contato" class="menu-link"><i class="fas fa-envelope-open"></i> Contato</a></li>
+                    <li class="menu-item"><a href="#orcamento" class="menu-link"><i class="fas fa-wallet"></i> Orçamento</a></li>
                 </ul>
             </nav>
             <div class="social-media">
@@ -77,7 +77,7 @@
                 </div>
                 <div class="conhecimento">
                     <div class="conhecimento-header">
-                        <i class="fa fa-laptop" aria-hidden="true"></i>
+                        <i class="fas fa-laptop-house"></i>
                         <h3>Manutenção de PCs</h3>
                     </div>
                     <div class="conhecimento-text">
@@ -197,25 +197,31 @@
         </section>
         <section class="sessao-orcamento" id="orcamento">
             <div class="orcamento-wrapper">
-                <h1>Faça um orçamento</h1>
+                <img src="/img/orcando.jpg" alt="Orçamento">
                 <form action="#">
-                    <label for="qtde">Quantidade de Páginas</label>
+                    <h1>Orçamento</h1>
+                    <label for="qtde">Nº de Páginas</label>
                     <input type="number" min="1" name="qtde" id="qtde">
-                    <label for="js">Preciso de um script JS</label>
-                    <input type="checkbox" name="js" id="js">
+                    <label for="js">Script JS ?</label>
+                    <label class="contain">
+                        <input type="checkbox" checked="checked" id="js">
+                        <span class="checkmark"></span>
+                    </label>
                     <label for="#">Layout</label>
                     <div class="group-layout">
-                        <div>
-                            <input type="radio" name="layout" id="layout-sim">
-                            <label for="layout-sim">Preciso de um Layout</label>
+                        <div class="containe">
+                            <input type="radio" name="layout" id="layout-sim" checked="checked"> Preciso de um Layout
+                            <label for="layout-sim" class="checkmar"></label>
                         </div>
-                        <div>
-                            <input type="radio" name="layout" id="layout-nao">
-                            <label for="layout-nao">Já tenho um Layout</label>
+                        <div class="containe">
+                            <input type="radio" name="layout" id="layout-nao" checked="checked"> Já tenho um Layout
+                            <label for="layout-nao" class="checkmar"></label>
                         </div>
                     </div>
                     <label for="prazo">Prazo</label>
-                    <input type="range" name="prazo" id="prazo" min="1" max="10">
+                    <div class="slidecontainer">
+                        <input type="range" name="prazo" id="prazo" min="1" max="10" class="slider">
+                    </div>
                     <label>R$ = </label>
                     <label id="preco">0,00</label>
                     <button type="submit" class=" btn btn-subimit">Enviar</button>
