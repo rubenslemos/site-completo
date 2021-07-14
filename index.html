@@ -38,7 +38,7 @@
                 <ul class="menu">
                     <li class="menu-item"><a href="#" class="menu-link"><i class="fas fa-home"></i> Início</a></li>
                     <li class="menu-item"><a href="#conhecimentos" class="menu-link"><i class="fas fa-book"></i> Conhecimento</a></li>
-                    <li class="menu-item"><a href="#projetos" class="menu-link"><i class="fas fa-address-book"></i> Cadastro de Clientes</a></li>
+                    <li class="menu-item"><a href="#clientes" class="menu-link"><i class="fas fa-address-book"></i> Cadastro de Clientes</a></li>
                     <li class="menu-item"><a href="#contato" class="menu-link"><i class="fas fa-envelope-open"></i> Contato</a></li>
                     <li class="menu-item"><a href="#orcamento" class="menu-link"><i class="fas fa-wallet"></i> Orçamento</a></li>
                 </ul>
@@ -124,44 +124,34 @@
                 </div>
             </div>
         </section>
-        <section class="sessao-projetos" id="projetos">
-            <div class="sessao-header">
-                <h1>Projetos</h1>
-            </div>
-            <div class="projetos">
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="/img/proj1.jpg" alt="Imagem Projeto To Do">
+        <section class="sessao-clientes" id="clientes">
+            <div class="clientes-wrapper">
+                <img src="/img/RumosEmPe.png" alt="Cadastro de Clientes">
+                <form action="#">
+                    <h1>Cadastro de Clientes</h1>
+                    <div>
+                        <p>Nome:</p><input type="text">
+                        <p>Telefone:</p><input type="text">
+                        <p>Sexo:</p><input type="text">
+                        <p>CPF:</p><input type="text">
+                        <p>Nascimento:</p><input type="date">
+                        <!-- <p>Cidade:</p><input type="text"></div>
+                    <div> -->
+                        <p>Estado:</p><input type="text">
+                        <p>Endereço:</p><input type="text">
+                        <p>CEP:</p><input type="text">
+                        <p>Senha:</p><input type="password">
+                        <p>Confirmar Senha:</p><input type="password">
                     </div>
-                    <div class="card-info">
-                        <h2>ToDo list</h2>
-                        <h3>Javascript</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod recusandae a quas molestiae consequatur veritatis? Eius et rerum laboriosam accusamus, necessitatibus facere ullam quas sit laborum consequuntur est. Accusantium, praesentium?</p>
-                        <button>Saiba Mais</button>
+                    <div>
+                        <button class="btn btn-cli">Novo</button>
+                        <button class="btn btn-cli">Gravar</button>
+                        <button class="btn btn-cli">Anterior</button>
+                        <button class="btn btn-cli">Proximo</button>
+                        <button class="btn btn-cli">Excluir</button>
+                        <button class="btn btn-cli">Consultar Orçamentos</button>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="/img/proj2.jpg" alt="imagem projeto maratona">
-                    </div>
-                    <div class="card-info">
-                        <h2>Maratona</h2>
-                        <h3>HTML, CSS</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod recusandae a quas molestiae consequatur veritatis? Eius et rerum laboriosam accusamus, necessitatibus facere ullam quas sit laborum consequuntur est. Accusantium, praesentium?.</p>
-                        <button>Saiba Mais</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrapper">
-                        <img src="/img/proj3.jpg" alt="Imagem do projeto A fazer">
-                    </div>
-                    <div class="card-info">
-                        <h2>Orçamento</h2>
-                        <h3>HTML, CSS, Javascript</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod recusandae a quas molestiae consequatur veritatis? Eius et rerum laboriosam accusamus, necessitatibus facere ullam quas sit laborum consequuntur est. Accusantium, praesentium?</p>
-                        <button>Saiba Mais</button>
-                    </div>
-                </div>
+                </form>
             </div>
         </section>
         <section class="sessao-contato" id="contato">
@@ -199,32 +189,26 @@
             <div class="orcamento-wrapper">
                 <img src="/img/orcando.jpg" alt="Orçamento">
                 <form action="#">
-                    <h1>Orçamento</h1>
-                    <label for="qtde">Nº de Páginas</label>
-                    <input type="number" min="1" name="qtde" id="qtde">
-                    <label for="js">Script JS ?</label>
-                    <label class="contain">
-                        <input type="checkbox" checked="checked" id="js">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label for="#">Layout</label>
-                    <div class="group-layout">
-                        <div class="containe">
-                            <input type="radio" name="layout" id="layout-sim" checked="checked"> Preciso de um Layout
-                            <label for="layout-sim" class="checkmar"></label>
-                        </div>
-                        <div class="containe">
-                            <input type="radio" name="layout" id="layout-nao" checked="checked"> Já tenho um Layout
-                            <label for="layout-nao" class="checkmar"></label>
-                        </div>
+                    <h1>Orçamentos</h1>
+                    <div>
+                        <p>Peça:</p><input type="text">
+                        <p>Preço de Compra:</p><input type="text">
+                        <p>Quantidade:</p><input type="text">
+                        <p>Margem de Lucro:</p><input type="text">
+                        <p>Mao de Obra:</p><input type="text">
+                        <p>Serviços:</p><input type="text">
                     </div>
-                    <label for="prazo">Prazo</label>
-                    <div class="slidecontainer">
-                        <input type="range" name="prazo" id="prazo" min="1" max="10" class="slider">
+                    <div>
+                        <button class="btn">Novo Orçamento</button>
+                        <button class="btn">Item Anterior</button>
+                        <button class="btn">Item Posterior</button>
+                        <button class="btn">Excluir Item</button>
+                        <button class="btn">Gravar Orçamento</button>
+                        <button class="btn">Excluir Orçamento</button>
+                        <button class="btn">Orçamento Cliente</button>
+                        <button class="btn">Relatório do Orçamento</button>
+                        <button class="btn">Consultar Orçamentos</button>
                     </div>
-                    <label>R$ = </label>
-                    <label id="preco">0,00</label>
-                    <button type="submit" class=" btn btn-subimit">Enviar</button>
                 </form>
             </div>
         </section>
