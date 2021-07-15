@@ -386,8 +386,14 @@
     }
     
     .sessao-clientes div {
-        margin-left: 1rem;
+        /* margin-left: 1rem; */
         width: 60%;
+    }
+    
+    .endereco {
+        display: flex;
+        flex-direction: column;
+        width: 3.3rem;
     }
     
     .clientes-wrapper {
@@ -447,8 +453,8 @@
     .sessao-clientes input {
         margin-bottom: 1rem;
         font-family: var(--font-secondary);
-        font-size: 1rem;
-        font-weight: 700;
+        font-size: 1.5rem;
+        /* font-weight: 400; */
         color: var(--blue-Rumos);
         text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
         background-color: rgba(65, 59, 59, .95);
