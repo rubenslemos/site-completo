@@ -662,10 +662,10 @@
         text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
         background-color: rgba(65, 59, 59, .95);
         border-bottom: 1px solid var(--blue-Rumos);
-        width: 18rem;
+        width: 30rem;
         outline: none;
         margin-top: .5rem;
-        margin-left: 1rem;
+        margin-left: 2rem;
     }
     
     .btn {
@@ -674,7 +674,7 @@
         font-weight: 500;
         width: 13rem;
         height: 2.2rem;
-        margin-left: 1rem;
+        margin-left: 3rem;
         margin-bottom: 2rem;
         background-color: var(--cor-fundo);
         background: linear-gradient(to top, var(--blue-Rumos), var(--azul-Rumos));
