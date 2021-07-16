@@ -386,14 +386,7 @@
     }
     
     .sessao-clientes div {
-        /* margin-left: 1rem; */
         width: 60%;
-    }
-    
-    .endereco {
-        display: flex;
-        flex-direction: column;
-        width: 3.3rem;
     }
     
     .clientes-wrapper {
@@ -443,26 +436,36 @@
         justify-content: center;
     }
     
-    .sessao-clientes p {
-        font-family: var(--font-secondary);
-        font-size: 1rem;
-        font-weight: 700;
-        color: var(--blue-Rumos);
-    }
-    
     .sessao-clientes input {
         margin-bottom: 1rem;
+        margin-top: .8rem;
         font-family: var(--font-secondary);
         font-size: 1.5rem;
-        /* font-weight: 400; */
+        font-weight: 600;
         color: var(--blue-Rumos);
         text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
         background-color: rgba(65, 59, 59, .95);
         border-bottom: 1px solid var(--blue-Rumos);
-        width: 10rem;
         outline: none;
-        margin-top: .5rem;
-        width: 35rem;
+        width: 36rem;
+    }
+    
+    input[type="date" i] {
+        align-items: center;
+        display: -webkit-inline-flex;
+        padding-inline-start: 1px;
+        cursor: default;
+        overflow: hidden;
+        width: 13rem;
+        margin-right: 3rem;
+        margin-left: 5rem;
+        margin-bottom: 3.2rem;
+    }
+    
+    .sessao-clientes button {
+        margin-right: 3rem;
+        margin-left: 5rem;
+        margin-bottom: 3.1rem;
     }
     
     .sessao-contato {
@@ -517,11 +520,6 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-    }
-    
-    .sessao-clientes button {
-        margin-right: 3rem;
-        margin-left: 5rem;
     }
     
     .input-group {
@@ -598,7 +596,7 @@
     
     .sessao-orcamento div {
         grid-column: 2;
-        margin-left: 2rem;
+        /* margin-left: 1rem; */
         width: 60%;
     }
     
@@ -663,9 +661,10 @@
         text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
         background-color: rgba(65, 59, 59, .95);
         border-bottom: 1px solid var(--blue-Rumos);
-        width: 30rem;
+        width: 18rem;
         outline: none;
         margin-top: .5rem;
+        margin-left: 1rem;
     }
     
     .btn {
