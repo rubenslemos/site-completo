@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="x-ua-compatible" content="ie=edge"> -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/stlyle.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
@@ -126,29 +126,37 @@
         <section class="sessao-clientes" id="clientes">
             <div class="clientes-wrapper">
                 <img src="/img/RumosEmPe.png" alt="Cadastro de Clientes">
-                <form action="#">
+                <form action="/#clientes" method="POST">
                     <h1>Cadastro de Clientes</h1>
                     <div>
-                        <input type="text" placeholder="Nome:">
-                        <input type="text" placeholder="E-mail:">
-                        <input type="text" placeholder="Telefone:">
-                        <input type="text" placeholder="Sexo:">
-                        <input type="text" placeholder="CPF:">
-                        <input type="text" placeholder="Cidade:">
-                        <input type="text" placeholder="Estado:">
-                        <input type="text" placeholder="Endereço:">
-                        <input type="text" placeholder="Cep:">
-                        <input type="password" placeholder="Senha:">
-                        <input type="password" placeholder="Confirmar Senha:">
-                    </div>
-                    <div>
-                        <input type="date" placeholder="Nascimento:">
-                        <button class="btn btn-cli">Novo</button>
-                        <button class="btn btn-cli">Gravar</button>
-                        <button class="btn btn-cli">Anterior</button>
-                        <button class="btn btn-cli">Proximo</button>
-                        <button class="btn btn-cli">Excluir</button>
-                        <button class="btn btn-cli">Consultar Orçamentos</button>
+                        <input type="text" placeholder="Nome:" name="nome">
+                        <p class="email">
+                            <input class="email" type="text" placeholder="E-mail:" name="email">
+                            <input class="interna2" type="text" placeholder="CPF:" name="cpf"></p>
+                        <p class="interna">
+                            <input class="interna" type="text" placeholder="Telefone:" name="telefone">
+                            <input class="interna" type="date" placeholder="Nascimento:" name="nascimento">
+                            <input class="interna2" type="text" placeholder="Sexo:" name="sexo">
+                        </p>
+                        <input type="text" placeholder="Endereço:" name="endereco">
+                        <p class="interna"><input class="interna" type="text" placeholder="Cidade:" name="cidade">
+                            <input class="interna" type="text" placeholder="Estado:" name="estado">
+                            <input class="interna2" type="text" placeholder="CEP:" name="cep"></p>
+                        <p class="password"><input class="password" type="password" placeholder="Senha:" name="senha">
+                            <input class="password2" type="password" placeholder="Confirmar Senha:" name="confirma">
+                        </p>
+                        <p class="password">
+                            <button class="btn btn-cli">Novo</button>
+                            <button class="btn btn-cli" id="botao1">salvar</button>
+                        </p>
+                        <p class="password">
+                            <button class="btn btn-cli">Anterior</button>
+                            <button class="btn btn-cli">Proximo</button>
+                        </p>
+                        <p class="password">
+                            <button class="btn btn-cli">Excluir</button>
+                            <button class="btn btn-cli">Listar Clientes</button>
+                        </p>
                     </div>
                 </form>
             </div>
@@ -187,27 +195,36 @@
         <section class="sessao-orcamento" id="orcamento">
             <div class="orcamento-wrapper">
                 <img src="/img/orcando.jpg" alt="Orçamento">
-                <form action="#">
+                <form action="#orcamento">
                     <h1>Orçamentos</h1>
                     <div>
-                        <input type="text" placeholder="Peça:">
-                        <input type="text" placeholder="Preço de Compra:">
-                        <input type="text" placeholder="Quantidade:">
-                        <input type="text" placeholder="Margem de Lucro:">
-                        <input type="text" placeholder="Mão de Obra:">
-                        <input type="text" placeholder="Serviços:">
-                    </div>
-                    <div>
+                        <input type="text" placeholder="Peça:" name="peca">
+                        <p class="orcamento">
+                            <input class="orcamento" type="text" placeholder="Compra $:" name="compras">
+                            <input class="orcamento" type="text" placeholder="Quantidade:" name="quantidade">
+                            <input class="orcamento" type="text" placeholder="Lucro(%):" name="lucro">
+                            <input class="orcamento" type="text" placeholder="Venda $:" name="venda">
+                        </p>
+                        <p class="orcamento">
+                            <input class="orcamento2" type="text" placeholder="Mão de Obra:" name="maodeobra">
+                            <input class="orcamento2" type="text" placeholder="Serviços:" name="servicos">
+                        </p>
+                        <p class="orcamento2">
+                            <button class="btn">Novo Orçamento</button>
+                            <button class="btn">Novo Item</button>
+                            <button class="btn">Item Anterior</button>
+                        </p>
+                        <p class="orcamento2">
+                            <button class="btn">Item Posterior</button>
+                            <button class="btn">Excluir Item</button>
+                            <button class="btn" id="botao2">Gravar Orçamento</button>
+                        </p>
+                        <p class="orcamento2">
+                            <button class="btn">Excluir Orçamento</button>
+                            <button class="btn">Orçamento Cliente</button>
+                            <button class="btn">Relatório do Orçamento</button>
+                        </p>
 
-                        <button class="btn">Novo Orçamento</button>
-                        <button class="btn">Item Anterior</button>
-                        <button class="btn">Item Posterior</button>
-                        <button class="btn">Excluir Item</button>
-                        <button class="btn">Gravar Orçamento</button>
-                        <button class="btn">Excluir Orçamento</button>
-                        <button class="btn">Orçamento Cliente</button>
-                        <button class="btn">Relatório do Orçamento</button>
-                        <button class="btn">Consultar Orçamentos</button>
                     </div>
                 </form>
             </div>
@@ -231,6 +248,7 @@
         </a>
     </div>
 </body>
-<script src="scripts/script.js"></script>
+<script src="/scripts/script.js"></script>
+<script src="/public/scripts/Insert.js"></script>
 
 </html>
