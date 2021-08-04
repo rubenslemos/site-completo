@@ -1,0 +1,13 @@
+const express = require('express')
+const route = express.Router()
+const insert = require('./Insert')
+const create = require('./CreateTables')
+const deletar = require('./delete')
+const read = require('./read')
+route.post('#orcamento', (insert.orcamento))
+route.post('#clientes', (insert.clientes))
+route.get('/post', read.readpost)
+route.get('/usercad', read.readuser)
+route.get('/deletepost/:id', deletar.deletepost)
+route.get('/deleteuser/:id', deletar.deleteuser)
+module.exports = route
