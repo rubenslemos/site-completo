@@ -10,13 +10,13 @@ const orcamento = function(req, res) {
         maodeobra: req.body.maodeobra,
         servicos: req.body.servicos
     }).then(function() {
-        res.redirect("/")
+        res.render("index")
     }).catch(function(erro) {
         res.send("Falha ao salvar: " + erro)
     })
 }
-const clientes = function(req, res) {
-    insert.Cliente.create({
+const usuarios = function(req, res) {
+    insert.Usuarios.create({
         nome: req.body.nome,
         email: req.body.email,
         cpf: req.body.cpf,
@@ -30,12 +30,12 @@ const clientes = function(req, res) {
         senha: req.body.senha,
         confirma: req.body.confirma,
     }).then(function() {
-        res.redirect("/")
+        res.render("add")
     }).catch(function(erro) {
         res.send("Falha ao criar Usuario, erro: " + erro)
     })
 }
 module.exports = {
     orcamento: orcamento,
-    clientes: clientes
+    usuarios: usuarios
 }
