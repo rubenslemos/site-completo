@@ -126,7 +126,7 @@
         <section class="sessao-clientes" id="clientes">
             <div class="clientes-wrapper">
                 <img src="/img/RumosEmPe.png" alt="Cadastro de Clientes">
-                <form action="/add" method="POST">
+                <form action="#clientes" method="POST">
                     <h1>Cadastro de Clientes</h1>
                     <div>
                         <input type="text" placeholder="Nome:" name="nome">
@@ -142,19 +142,20 @@
                         <p class="interna"><input class="interna" type="text" placeholder="Cidade:" name="cidade">
                             <input class="interna" type="text" placeholder="Estado:" name="estado">
                             <input class="interna2" type="text" placeholder="CEP:" name="cep"></p>
-                        <p class="password">
-                            <input class="password" type="password" placeholder="Senha:" name="senha">
+                        <p class="password"><input class="password" type="password" placeholder="Senha:" name="senha">
                             <input class="password2" type="password" placeholder="Confirmar Senha:" name="confirma">
                         </p>
-                        <p class="button">
-                            <button class="btn button">Novo</button>
-                            <button class="btn button" type="submit">salvar</button>
-                            <button class="btn button">Anterior</button>
+                        <p class="password">
+                            <button class="btn btn-cli">Novo</button>
+                            <button class="btn btn-cli" type="submit">salvar</button>
                         </p>
-                        <p class="button">
-                            <button class="btn button">Proximo</button>
-                            <button class="btn button">Excluir</button>
-                            <button class="btn button">Listar Clientes</button>
+                        <p class="password">
+                            <button class="btn btn-cli">Anterior</button>
+                            <button class="btn btn-cli">Proximo</button>
+                        </p>
+                        <p class="password">
+                            <button class="btn btn-cli">Excluir</button>
+                            <button class="btn btn-cli">Listar Clientes</button>
                         </p>
                     </div>
                 </form>
@@ -194,7 +195,7 @@
         <section class="sessao-orcamento" id="orcamento">
             <div class="orcamento-wrapper">
                 <img src="/img/orcando.jpg" alt="Orçamento">
-                <form action="/" method="POST">
+                <form action="#orcamento" method="POST">
                     <h1>Orçamentos</h1>
                     <div>
                         <input type="text" placeholder="Peça:" name="peca">
