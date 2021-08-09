@@ -5,9 +5,11 @@
         "deletepost",
         "deleteuser",
         "endereco",
+        "insertdb",
         "maodeobra",
         "readpost",
         "readuser",
-        "usercad"
+        "usercad",
+        "usuarios"
     ]
 }
